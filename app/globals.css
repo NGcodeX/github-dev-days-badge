@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gh-bg: #0d1117;
+  --color-gh-card: #161b22;
+  --color-gh-border: #30363d;
+  --color-gh-text: #e6edf3;
+  --color-gh-muted: #8b949e;
+  --color-gh-faint: #6e7681;
+  --color-neon: #39d353;
+  --color-neon-dark: #238636;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(57, 211, 83, 0.35);
+}
+
+/* Neon range slider */
+input[type="range"].neon-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #30363d;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"].neon-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #39d353;
+  border: 3px solid #0d1117;
+  box-shadow: 0 0 0 2px #39d353;
+  cursor: pointer;
+}
+
+input[type="range"].neon-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #39d353;
+  border: 3px solid #0d1117;
+  box-shadow: 0 0 0 2px #39d353;
+  cursor: pointer;
+}
+
+/* Subtle dotted tech backdrop */
+.dot-grid {
+  background-image: radial-gradient(rgba(57, 211, 83, 0.13) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black 30%, transparent 90%);
+}
